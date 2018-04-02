@@ -36,7 +36,7 @@ class MapViewController: UIViewController {
         if press.state == .began {
             let location = press.location(in: map)
             let coordinate = map.convert(location, toCoordinateFrom: map)
-            print("cootrdinates: \(coordinate.latitude)")
+            print("cootrdinates: \(coordinate.latitude)  \(coordinate.longitude) ")
         }
     }
 }
