@@ -37,6 +37,10 @@ class MapViewController: UIViewController {
             let location = press.location(in: map)
             let coordinate = map.convert(location, toCoordinateFrom: map)
             print("cootrdinates: \(coordinate.latitude)  \(coordinate.longitude) ")
+            let viewControler = storyboard?.instantiateViewController(withIdentifier: "PostVC") as! PostViewController
+            viewControler.currentCoordinates = coordinate
+            navigationController?.pushViewController(viewControler, animated: true)
+            //present(viewControler, animated: true, completion: nil)  //В случае без NavigationBar
         }
     }
 }

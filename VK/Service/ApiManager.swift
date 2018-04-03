@@ -117,11 +117,13 @@ class ApiManager {
     
     func addPost(text: String) {
         
+        print("text in addPost: \(text)")
+        
         let path: String = "\(baseUrl)wall.post\(userId)\(token)&message=\(text)\(verApi)"
         let url = URL(string: path)
         
         guard url != nil else {
-            print("Wrong url")
+            print("Wrong url in addPost")
             return}
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             let json = JSON(response.value!)
