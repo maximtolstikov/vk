@@ -48,6 +48,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+        print("Вызов обновления данных в фоне \(Date())")
+        if lastUpdate != nil, abs(lastUpdate!.timeIntervalSinceNow) < 30 {
+            print("Фоновое обновление не требуется, т.к. крайний раз данные обновлялись \(abs(lastUpdate!.timeIntervalSinceNow)) секунд назад (меньше 30)")
+            completionHandler(.noData)
+            return }
+        
+        let apiManager: ApiManager =  ApiManager()
+        apiManager.getRequestFrends { (friends) in
+            print(friends.count)
+        }
+        
+        fetchRequestFriendsGroup.notify( queue: DispatchQueue.main)  {
+            print("Все данные загружены в фоне")
+            timer  =  nil
+            lastUpdate =  Date()
+            completionHandler(.newData)
+            return }
+        timer =  DispatchSource.makeTimerSource( queue: DispatchQueue.main)
+        timer?.schedule( deadline: .now() + 29, leeway: .seconds(1) )
+        timer?.setEventHandler {
+            print ("Говорим системе, что не смогли загрузить данные")
+            fetchRequestFriendsGroup.suspend()
+            completionHandler(.failed)
+            return }
+        timer?.resume() }
 
 }
 

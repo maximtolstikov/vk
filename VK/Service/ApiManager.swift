@@ -117,8 +117,6 @@ class ApiManager {
     
     func addPost(text: String) {
         
-        print("text in addPost: \(text)")
-        
         let path: String = "\(baseUrl)wall.post\(userId)\(token)&message=\(text)\(verApi)"
         let url = URL(string: path)
         
@@ -131,5 +129,23 @@ class ApiManager {
         }
     }
 
+    func getRequestFrends(complition: @escaping ([Int]) -> ()) {
+        
+        let path: String = "\(baseUrl)friends.getRequests\(userId)\(token)\(verApi)"
+        let url = URL(string: path)
+        
+        guard url != nil else {
+            return}
+        Alamofire.request(url!, method: .get).validate().responseJSON { response in
+            let json = JSON(response.value!)
+            
+            let array = json["response"]["items"].arrayValue
+            var arrayInt = [Int]()
+            for i in array {
+                arrayInt.append(i.intValue)
+            }
+            complition(arrayInt)
+        }
+    }
     
 }
