@@ -20,7 +20,7 @@ class StartTabBarController: UITabBarController {
         
         print(VKSdk.accessToken().accessToken)
         print(VKSdk.accessToken().userId)
-        
+              
         ref.child("user_id").setValue(userId)
        
         self.navigationController?.view.backgroundColor = UIColor.white

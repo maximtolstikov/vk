@@ -188,7 +188,7 @@
         <!--Message-->
         <scene sceneID="pI3-Z0-4F2">
             <objects>
-                <tableViewController id="wlB-hU-zhA" sceneMemberID="viewController">
+                <tableViewController id="wlB-hU-zhA" customClass="MessageTableViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="c1g-hu-m9V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -212,7 +212,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f1m-zA-wwX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057" y="976"/>
+            <point key="canvasLocation" x="1057" y="717"/>
         </scene>
         <!--Groups-->
         <scene sceneID="0NK-Na-mMj">

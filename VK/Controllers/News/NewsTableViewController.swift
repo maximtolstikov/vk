@@ -6,7 +6,6 @@
 //  Copyright © 2018 Maxim Tolstikov. All rights reserved.
 
 import UIKit
-import VK_ios_sdk
 import RealmSwift
 
 class NewsTableViewController: UITableViewController {

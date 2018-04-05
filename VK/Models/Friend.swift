@@ -34,3 +34,20 @@ class Friend: Object {
     }
 }
 
+class FriendRequest: Object {
+    
+    var items = List<IntObject>()
+    @objc dynamic var count: Int = 0
+    
+    convenience init(json: JSON) {
+        self.init()
+        
+        self.count = json["count"].intValue
+    }
+    
+}
+
+class IntObject: Object {
+    @objc dynamic var value = 0
+}
+
