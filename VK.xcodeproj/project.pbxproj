@@ -178,7 +178,7 @@
 		94D96877202DD745002144CD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				94F1089A203B3C28004DEB81 /* NewsCelll */,
+				94F1089A203B3C28004DEB81 /* NewsCell */,
 				94168346202727A3003E24FB /* FriendsTableViewCell.swift */,
 				94DCD7C0202A30DD00F7AEDE /* FriendCollectionViewCell.swift */,
 				94168348202727BE003E24FB /* GroupsTableViewCell.swift */,
@@ -199,14 +199,14 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		94F1089A203B3C28004DEB81 /* NewsCelll */ = {
+		94F1089A203B3C28004DEB81 /* NewsCell */ = {
 			isa = PBXGroup;
 			children = (
 				94F702E020444A7D0004607E /* NewsTableViewCell.swift */,
 				9437A4012073EAC60081628C /* NewsTableViewCellOne.swift */,
 				9437A4032073EADD0081628C /* NewsTableViewCellTwo.swift */,
 			);
-			path = NewsCelll;
+			path = NewsCell;
 			sourceTree = "<group>";
 		};
 		94FFD6C2202C756600DC223F /* Controllers */ = {
