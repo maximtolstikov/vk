@@ -550,7 +550,7 @@
         <!--Post View Controller-->
         <scene sceneID="QZy-2K-XOM">
             <objects>
-                <viewController id="uV5-ix-iQ4" customClass="PostViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PostVC" id="uV5-ix-iQ4" customClass="PostViewController" customModule="VK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ihc-Ol-kxg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -610,7 +610,6 @@
                     </view>
                     <connections>
                         <outlet property="map" destination="VT6-sN-v8v" id="ysR-as-y4i"/>
-                        <segue destination="uV5-ix-iQ4" kind="show" identifier="sendCoordinares" id="mEq-X7-JSk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dEM-Og-BTz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -648,7 +647,6 @@
         <image name="repost" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mEq-X7-JSk"/>
-        <segue reference="3fl-y4-fwS"/>
+        <segue reference="Buw-Ha-Lg8"/>
     </inferredMetricsTieBreakers>
 </document>

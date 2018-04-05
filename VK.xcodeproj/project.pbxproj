@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		940F8B0C2039BD8600E18FCD /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F8B0B2039BD8600E18FCD /* NewsTableViewController.swift */; };
-		940F8B0E2039BDA100E18FCD /* NewsTableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F8B0D2039BDA100E18FCD /* NewsTableViewCellOne.swift */; };
 		940F8B112039C4E500E18FCD /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F8B102039C4E500E18FCD /* NewsService.swift */; };
 		9416834120271FDC003E24FB /* StartTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416834020271FDC003E24FB /* StartTabBarController.swift */; };
 		941683452027277E003E24FB /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941683442027277E003E24FB /* FriendsTableViewController.swift */; };
@@ -17,6 +16,8 @@
 		9416834B202727D6003E24FB /* GroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416834A202727D6003E24FB /* GroupsTableViewController.swift */; };
 		94244C242056CE9200D774FA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94244C232056CE9200D774FA /* GoogleService-Info.plist */; };
 		94244C262056FA0800D774FA /* SearchGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94244C252056FA0800D774FA /* SearchGroupViewController.swift */; };
+		9437A4022073EAC60081628C /* NewsTableViewCellOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437A4012073EAC60081628C /* NewsTableViewCellOne.swift */; };
+		9437A4042073EADD0081628C /* NewsTableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9437A4032073EADD0081628C /* NewsTableViewCellTwo.swift */; };
 		944ED486205797B0002BB108 /* SearchGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944ED485205797B0002BB108 /* SearchGroupTableViewCell.swift */; };
 		9459263E20244D7E00440CD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459263D20244D7E00440CD6 /* AppDelegate.swift */; };
 		9459264020244D7E00440CD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459263F20244D7E00440CD6 /* ViewController.swift */; };
@@ -33,7 +34,6 @@
 		94EB6002202C72BB00D7A6CE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EB6001202C72BB00D7A6CE /* Friend.swift */; };
 		94EB6004202C732800D7A6CE /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94EB6003202C732800D7A6CE /* FriendService.swift */; };
 		94F10897203A8273004DEB81 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F10896203A8273004DEB81 /* News.swift */; };
-		94F10899203ABB03004DEB81 /* NewsTableViewCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F10898203ABB03004DEB81 /* NewsTableViewCellTwo.swift */; };
 		94F702E120444A7D0004607E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F702E020444A7D0004607E /* NewsTableViewCell.swift */; };
 		EE3546DBFDE27BCBD15B7B9A /* Pods_VK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86E77673F53437E2CB36CD62 /* Pods_VK.framework */; };
 /* End PBXBuildFile section */
@@ -42,7 +42,6 @@
 		0C39B3A3514B2E5D32747A83 /* Pods-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.release.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.release.xcconfig"; sourceTree = "<group>"; };
 		86E77673F53437E2CB36CD62 /* Pods_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		940F8B0B2039BD8600E18FCD /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
-		940F8B0D2039BDA100E18FCD /* NewsTableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCellOne.swift; sourceTree = "<group>"; };
 		940F8B102039C4E500E18FCD /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		9416834020271FDC003E24FB /* StartTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabBarController.swift; sourceTree = "<group>"; };
 		941683442027277E003E24FB /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +50,8 @@
 		9416834A202727D6003E24FB /* GroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsTableViewController.swift; sourceTree = "<group>"; };
 		94244C232056CE9200D774FA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94244C252056FA0800D774FA /* SearchGroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupViewController.swift; sourceTree = "<group>"; };
+		9437A4012073EAC60081628C /* NewsTableViewCellOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCellOne.swift; sourceTree = "<group>"; };
+		9437A4032073EADD0081628C /* NewsTableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCellTwo.swift; sourceTree = "<group>"; };
 		944ED485205797B0002BB108 /* SearchGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchGroupTableViewCell.swift; sourceTree = "<group>"; };
 		9459263A20244D7E00440CD6 /* VK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9459263D20244D7E00440CD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		94EB6001202C72BB00D7A6CE /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		94EB6003202C732800D7A6CE /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		94F10896203A8273004DEB81 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		94F10898203ABB03004DEB81 /* NewsTableViewCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCellTwo.swift; sourceTree = "<group>"; };
 		94F702E020444A7D0004607E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		E723900E6098E59494D9370D /* Pods-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -202,9 +202,9 @@
 		94F1089A203B3C28004DEB81 /* NewsCelll */ = {
 			isa = PBXGroup;
 			children = (
-				940F8B0D2039BDA100E18FCD /* NewsTableViewCellOne.swift */,
-				94F10898203ABB03004DEB81 /* NewsTableViewCellTwo.swift */,
 				94F702E020444A7D0004607E /* NewsTableViewCell.swift */,
+				9437A4012073EAC60081628C /* NewsTableViewCellOne.swift */,
+				9437A4032073EADD0081628C /* NewsTableViewCellTwo.swift */,
 			);
 			path = NewsCelll;
 			sourceTree = "<group>";
@@ -375,8 +375,8 @@
 			files = (
 				9459264020244D7E00440CD6 /* ViewController.swift in Sources */,
 				94EB6000202C522400D7A6CE /* GroupService.swift in Sources */,
-				940F8B0E2039BDA100E18FCD /* NewsTableViewCellOne.swift in Sources */,
 				94168349202727BE003E24FB /* GroupsTableViewCell.swift in Sources */,
+				9437A4022073EAC60081628C /* NewsTableViewCellOne.swift in Sources */,
 				94244C262056FA0800D774FA /* SearchGroupViewController.swift in Sources */,
 				94DCD7C1202A30DD00F7AEDE /* FriendCollectionViewCell.swift in Sources */,
 				94EB6002202C72BB00D7A6CE /* Friend.swift in Sources */,
@@ -387,7 +387,6 @@
 				941683452027277E003E24FB /* FriendsTableViewController.swift in Sources */,
 				94DCD7C5202A31C600F7AEDE /* FriendCollectionViewController.swift in Sources */,
 				940F8B112039C4E500E18FCD /* NewsService.swift in Sources */,
-				94F10899203ABB03004DEB81 /* NewsTableViewCellTwo.swift in Sources */,
 				9416834B202727D6003E24FB /* GroupsTableViewController.swift in Sources */,
 				94EB6004202C732800D7A6CE /* FriendService.swift in Sources */,
 				94168347202727A3003E24FB /* FriendsTableViewCell.swift in Sources */,
@@ -397,6 +396,7 @@
 				94F10897203A8273004DEB81 /* News.swift in Sources */,
 				9416834120271FDC003E24FB /* StartTabBarController.swift in Sources */,
 				94F702E120444A7D0004607E /* NewsTableViewCell.swift in Sources */,
+				9437A4042073EADD0081628C /* NewsTableViewCellTwo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
