@@ -15,19 +15,17 @@ class MessageTableViewController: UITableViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
+
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
         
         apiManager.getRequestFrends { (friendsId) in
             
-                print(friendsId[0])
+            print(friendsId.count)
             
         }        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {

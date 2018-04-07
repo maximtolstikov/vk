@@ -38,7 +38,6 @@ class GroupService {
     func saveGroupData(_ groups: [Group]) {        
         do{
             let realm = try Realm()
-            //print(realm.configuration.fileURL)
             let oldData = realm.objects(Group.self)
             realm.beginWrite()
             realm.delete(oldData)

@@ -11,6 +11,7 @@
 import UIKit
 import VK_ios_sdk
 import RealmSwift
+import UserNotifications
 
 class FriendsTableViewController: UITableViewController {
     
@@ -30,7 +31,9 @@ class FriendsTableViewController: UITableViewController {
        
     }
     override func viewWillAppear(_ animated: Bool) {
-         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: nil)
+        UIApplication.shared.applicationIconBadgeNumber = 0
     }
     
     func pairTableAndRealm(){

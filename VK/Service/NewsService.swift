@@ -81,7 +81,6 @@ class NewsService {
                     }
                 }
             }
-
             
             realm.beginWrite()
             realm.delete(oldNews)

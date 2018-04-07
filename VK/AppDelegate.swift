@@ -9,6 +9,7 @@
 import UIKit
 import VK_ios_sdk
 import Firebase
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
         FirebaseApp.configure()
+        registerForBadgeNotifications()
+        
         return true
     }
 
@@ -49,31 +53,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
-        print("Вызов обновления данных в фоне \(Date())")
-        if lastUpdate != nil, abs(lastUpdate!.timeIntervalSinceNow) < 30 {
-            print("Фоновое обновление не требуется, т.к. крайний раз данные обновлялись \(abs(lastUpdate!.timeIntervalSinceNow)) секунд назад (меньше 30)")
-            completionHandler(.noData)
-            return }
         
-        let apiManager: ApiManager =  ApiManager()
-        apiManager.getRequestFrends { (friends) in
-            print(friends.count)
+        let fetchRequestManager = FetchRequestManager()
+        fetchRequestManager.getFetchRequest { (result) in
+
+            guard result != nil else {
+                completionHandler(.failed)
+                return
+            }
+            if result == 0 {
+                completionHandler(.noData)
+            } else {
+                self.incrementBadgeNumberBy(badgeNumberIncrement: result!)
+                completionHandler(.newData)
+            }
         }
-        
-        fetchRequestFriendsGroup.notify( queue: DispatchQueue.main)  {
-            print("Все данные загружены в фоне")
-            timer  =  nil
-            lastUpdate =  Date()
-            completionHandler(.newData)
-            return }
-        timer =  DispatchSource.makeTimerSource( queue: DispatchQueue.main)
-        timer?.schedule( deadline: .now() + 29, leeway: .seconds(1) )
-        timer?.setEventHandler {
-            print ("Говорим системе, что не смогли загрузить данные")
-            fetchRequestFriendsGroup.suspend()
-            completionHandler(.failed)
-            return }
-        timer?.resume() }
+    }
+    
+    func registerForBadgeNotifications() {
+        UNUserNotificationCenter.current().requestAuthorization(options: .badge) {
+            (granted, error) in
+            print("Permission granted: \(granted)")
+        }
+    }
+    
+    func incrementBadgeNumberBy(badgeNumberIncrement: Int) {
+        let currentBadgeNumber = UIApplication.shared.applicationIconBadgeNumber
+        let updatedBadgeNumber = currentBadgeNumber + badgeNumberIncrement
+        if (updatedBadgeNumber > -1) {
+            UIApplication.shared.applicationIconBadgeNumber = updatedBadgeNumber
+        }
+    }
 
 }
 

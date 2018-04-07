@@ -22,8 +22,8 @@
 		9459264320244D7E00440CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9459264120244D7E00440CD6 /* Main.storyboard */; };
 		9459264820244D7E00440CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9459264620244D7E00440CD6 /* LaunchScreen.storyboard */; };
 		9469126A207629C30035F719 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94691269207629C30035F719 /* MessageTableViewController.swift */; };
-		9469126C20762FEF0035F719 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9469126B20762FEF0035F719 /* Utils.swift */; };
 		94A2CC2020456FF000A3A757 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A2CC1F20456FF000A3A757 /* Group.swift */; };
+		94AF046320774BFF00223755 /* FetchRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AF046220774BFF00223755 /* FetchRequestManager.swift */; };
 		94DCD7C1202A30DD00F7AEDE /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD7C0202A30DD00F7AEDE /* FriendCollectionViewCell.swift */; };
 		94DCD7C5202A31C600F7AEDE /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DCD7C4202A31C600F7AEDE /* FriendCollectionViewController.swift */; };
 		94E41B3520653DBD003820ED /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E41B3420653DBD003820ED /* ApiManager.swift */; };
@@ -58,8 +58,8 @@
 		9459264720244D7E00440CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9459264920244D7E00440CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94691269207629C30035F719 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
-		9469126B20762FEF0035F719 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		94A2CC1F20456FF000A3A757 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		94AF046220774BFF00223755 /* FetchRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchRequestManager.swift; sourceTree = "<group>"; };
 		94DCD7C0202A30DD00F7AEDE /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		94DCD7C4202A31C600F7AEDE /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		94E41B3420653DBD003820ED /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 				94EB5FFF202C522400D7A6CE /* GroupService.swift */,
 				940F8B102039C4E500E18FCD /* NewsService.swift */,
 				94E41B3420653DBD003820ED /* ApiManager.swift */,
-				9469126B20762FEF0035F719 /* Utils.swift */,
+				94AF046220774BFF00223755 /* FetchRequestManager.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -409,7 +409,7 @@
 				94F10897203A8273004DEB81 /* News.swift in Sources */,
 				9416834120271FDC003E24FB /* StartTabBarController.swift in Sources */,
 				94F702E120444A7D0004607E /* NewsTableViewCell.swift in Sources */,
-				9469126C20762FEF0035F719 /* Utils.swift in Sources */,
+				94AF046320774BFF00223755 /* FetchRequestManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

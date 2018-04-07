@@ -123,28 +123,48 @@ class ApiManager {
         guard url != nil else {
             print("Wrong url in addPost")
             return}
+        
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
-            let json = JSON(response.value!)
-            print(json)
+            //let json = JSON(response.value!)
         }
     }
 
     func getRequestFrends(complition: @escaping ([Int]) -> ()) {
         
-        let path: String = "\(baseUrl)friends.getRequests\(userId)\(token)\(verApi)"
+        let path: String = "\(baseUrl)friends.getRequests\(userId)\(token)&need_viewed=1\(verApi)"
         let url = URL(string: path)
         
         guard url != nil else {
             return}
+        
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             let json = JSON(response.value!)
-            
             let array = json["response"]["items"].arrayValue
             var arrayInt = [Int]()
             for i in array {
                 arrayInt.append(i.intValue)
             }
             complition(arrayInt)
+        }
+    }
+    
+    func addFriend(id: Int, complition: @escaping (Bool) -> ()) {
+
+        let path: String = "\(baseUrl)friends.add\(userId)\(token)&user_id=\(id)\(verApi)"
+        let url = URL(string: path)
+        
+        guard url != nil else {return}
+        Alamofire.request(url!, method: .get).validate().responseJSON { response in
+            
+            guard response.value != nil else {return}
+            let json = JSON(response.value!)
+            let response = json["response"].intValue
+
+            if response == 2 {
+                complition(true)
+                return
+            }
+            complition(false)
         }
     }
     
