@@ -23,6 +23,9 @@ class ApiManager {
         let path: String = "\(baseUrl)groups.get\(userId)\(token)&extended=1&v=5.71"
         let url = URL(string: path)
         
+        guard url != nil else {
+            print("пустой url")
+            return}
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             
             switch response.result {
@@ -41,6 +44,9 @@ class ApiManager {
         let path: String = "\(baseUrl)friends.get\(userId)\(token)&fields=nikname,photo_50,photo_400_orig\(verApi)"
         let url = URL(string: path)
         
+        guard url != nil else {
+            print("пустой url")
+            return}
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             
             switch response.result {
@@ -58,6 +64,9 @@ class ApiManager {
         let path: String = "\(baseUrl)newsfeed.get\(userId)\(token)&filters=post&count=50\(verApi)"
         let urlNews = URL(string: path)
         
+        guard urlNews != nil else {
+            print("пустой url")
+            return}
         Alamofire.request(urlNews!, method: .get).validate().responseJSON { response in
 
             switch response.result {
@@ -75,6 +84,10 @@ class ApiManager {
         
         let path: String = "\(baseUrl)groups.leave\(userId)\(token)&group_id=\(groupId)\(verApi)"
         let url = URL(string: path)
+        
+        guard url != nil else {
+            print("пустой url")
+            return}
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             
             switch response.result {
@@ -92,6 +105,9 @@ class ApiManager {
         let path: String = "\(baseUrl)groups.join\(userId)\(token)&group_id=\(groupId)\(verApi)"
         let url = URL(string: path)
         
+        guard url != nil else {
+            print("пустой url")
+            return}
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             
            // _ = JSON(response.value!)
@@ -104,6 +120,9 @@ class ApiManager {
         let path: String = "\(baseUrl)groups.search\(userId)\(token)&q=\(q)&count=10\(verApi)"
         let url = URL(string: path)
         
+        guard url != nil else {
+            print("пустой url")
+            return}
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
 
             let json = JSON(response.value!)
@@ -123,7 +142,6 @@ class ApiManager {
         guard url != nil else {
             print("Wrong url in addPost")
             return}
-        
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             //let json = JSON(response.value!)
         }
@@ -136,7 +154,6 @@ class ApiManager {
         
         guard url != nil else {
             return}
-        
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             let json = JSON(response.value!)
             let array = json["response"]["items"].arrayValue
