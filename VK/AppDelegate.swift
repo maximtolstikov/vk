@@ -10,6 +10,7 @@ import UIKit
 import VK_ios_sdk
 import Firebase
 import UserNotifications
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -26,6 +27,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         registerForBadgeNotifications()
+        
+        var config = Realm.Configuration()        
+        // Use the default directory, but replace the filename with the username
+        config.fileURL = FileManager.default
+            .containerURL(forSecurityApplicationGroupIdentifier: "group.ru.pricemin.VK")!
+            .appendingPathComponent("Library/Caches/default.realm")
+        // Set this as the configuration used for the default Realm
+        Realm.Configuration.defaultConfiguration = config       
         
         return true
     }

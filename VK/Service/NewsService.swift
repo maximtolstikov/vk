@@ -50,7 +50,7 @@ class NewsService {
     
     func saveNewsData( news: [News]) {
                 
-        do{
+        do{            
             let realm = try Realm()
             //print(realm.configuration.fileURL)
             let oldNews = realm.objects(News.self)
@@ -91,6 +91,7 @@ class NewsService {
             realm.delete(oldViews)
             realm.add(news)
             try realm.commitWrite()
+            saveNewsForToday(news: news)
             
         } catch {
             print(error.localizedDescription)
@@ -125,19 +126,12 @@ class NewsService {
         }
     }
     
-    func addCacheUrlNewsGroup(cache_photo: String, id: Int) {
-//        do{
-//            
-//            guard let realm = try? Realm() else {return}
-//            let photo = realm.objects(Groups.self).filter("id==%@", id)
-//            realm.beginWrite()
-//            photo[0].cashed_photo = cache_photo
-//            realm.add(photo[0])
-//            try realm.commitWrite()
-//            print("Save realm (News)")
-//        } catch {
-//            print(error.localizedDescription)
-//        }
+    func saveNewsForToday(news: [News]) {
+        
+        let defaults = UserDefaults(suiteName: "group.ru.pricemin.VK")
+        defaults?.set(news[0].name_lable, forKey: "avatarLable")
+        defaults?.synchronize()
+
     }
 
 }
