@@ -127,12 +127,13 @@ class NewsService {
     }
     
     func saveNewsForToday(news: [News]) {
-        
+
         let defaults = UserDefaults(suiteName: "group.ru.pricemin.VK")
         defaults?.set(news[0].name_lable, forKey: "avatarLable")
         defaults?.synchronize()
 
     }
+    
 
 }
 

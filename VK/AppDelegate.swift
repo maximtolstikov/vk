@@ -11,11 +11,16 @@ import VK_ios_sdk
 import Firebase
 import UserNotifications
 import RealmSwift
+import WatchConnectivity
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
+    
+
+    
 
     var window: UIWindow?
+    var session: WCSession?
 
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
@@ -34,31 +39,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .containerURL(forSecurityApplicationGroupIdentifier: "group.ru.pricemin.VK")!
             .appendingPathComponent("Library/Caches/default.realm")
         // Set this as the configuration used for the default Realm
-        Realm.Configuration.defaultConfiguration = config       
+        Realm.Configuration.defaultConfiguration = config
+        
+        if WCSession.isSupported(){
+            session = WCSession.default
+            session?.delegate = self
+            session?.activate()
+        }
         
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
     func application(_ application: UIApplication, performFetchWithCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
@@ -92,6 +96,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (updatedBadgeNumber > -1) {
             UIApplication.shared.applicationIconBadgeNumber = updatedBadgeNumber
         }
+    }
+    
+    private func session(_ session: WCSession, didReceiveMessageData message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {    
+        
+        if message["request"] as! String == "news" {
+            replyHandler(["textNews": "any text"])
+        }
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {        
     }
 
 }
