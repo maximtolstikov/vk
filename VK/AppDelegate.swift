@@ -15,13 +15,9 @@ import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
-    
-
-    
 
     var window: UIWindow?
     var session: WCSession?
-
     
     func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         VKSdk.processOpen(url, fromApplication: sourceApplication)
@@ -98,10 +94,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
         }
     }
     
-    private func session(_ session: WCSession, didReceiveMessageData message: [String: Any], replyHandler: @escaping ([String: Any]) -> Void) {    
-        
-        if message["request"] as! String == "news" {
-            replyHandler(["textNews": "any text"])
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String: Any]) -> (Void)) {
+
+        if message["request"] as? String == "news" {
+            
+            let newsForArray = NewsForWatchApp()
+            let news = newsForArray.getArrayDataNews()
+            
+            replyHandler(news)
         }
     }
     
@@ -115,4 +115,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

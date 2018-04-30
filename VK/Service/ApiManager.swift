@@ -8,6 +8,7 @@
 import VK_ios_sdk
 import Alamofire
 import SwiftyJSON
+import Foundation
 
 class ApiManager {
     
@@ -61,20 +62,20 @@ class ApiManager {
     //MARK: Получение новостей
     func getNewsJson(complitionHandler: @escaping (JSON?, Error?) ->()) {
         
-        let path: String = "\(baseUrl)newsfeed.get\(userId)\(token)&filters=post&count=50\(verApi)"
+        let path: String = "\(baseUrl)newsfeed.get\(userId)\(token)&filters=post&count=10\(verApi)"
         let urlNews = URL(string: path)
         
         guard urlNews != nil else {
             print("пустой url")
             return}
         Alamofire.request(urlNews!, method: .get).validate().responseJSON { response in
-
+            
             switch response.result {
             case .success(let value):
-                    let json = JSON(value)
-                    complitionHandler(json, nil)
+                let json = JSON(value)
+                complitionHandler(json, nil)
             case .failure(let error):
-                    complitionHandler(nil, error)
+                complitionHandler(nil, error)
             }            
         }
     }
@@ -110,7 +111,7 @@ class ApiManager {
             return}
         Alamofire.request(url!, method: .get).validate().responseJSON { response in
             
-           // _ = JSON(response.value!)
+            // _ = JSON(response.value!)
             
         }
     }
@@ -118,20 +119,37 @@ class ApiManager {
     func searchGroups( q: String, complition: @escaping ([Group]) -> ()) {
         
         let path: String = "\(baseUrl)groups.search\(userId)\(token)&q=\(q)&count=10\(verApi)"
-        let url = URL(string: path)
+        let stringEncoding = path.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        guard stringEncoding != nil else {
+            print("stringEncoding is nil")
+            return
+        }
+        let url = URL(string: stringEncoding!)
         
         guard url != nil else {
             print("пустой url")
             return}
-        Alamofire.request(url!, method: .get).validate().responseJSON { response in
-
-            let json = JSON(response.value!)
-            DispatchQueue.global(qos: .userInteractive).async {
-                let json = JSON(json)
-                let groups = json["response"]["items"].flatMap({Group(json: $0.1)})
-                complition(groups)
-            }
+        
+        print("url \(url)")
+        
+        Alamofire.request(url!, method: .get)
+            .validate().responseJSON { response in
+                
+                guard response.value != nil else {
+                    print("response.value is nil (request search group)")
+                    return
+                }
+                
+                let json = JSON(response.value!)
+                DispatchQueue.global(qos: .userInteractive).async {
+                    let json = JSON(json)
+                    let groups = json["response"]["items"].flatMap({Group(json: $0.1)})
+                    complition(groups)
+                }
         }
+        
+        
     }
     
     func addPost(text: String) {

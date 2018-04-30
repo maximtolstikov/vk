@@ -69,6 +69,7 @@ class NewsTableViewController: UITableViewController {
     //MARK: Загрузка изображения новости
     func loadContentImage(indexPath: IndexPath) {
         
+        guard !(news![indexPath.row].photo.isEmpty) else {return}
         let thisContentImage = news![indexPath.row].photo[0]
         let imageContentId = thisContentImage.id
         

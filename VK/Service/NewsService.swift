@@ -92,6 +92,7 @@ class NewsService {
             realm.add(news)
             try realm.commitWrite()
             saveNewsForToday(news: news)
+            createCacheForWatch(news: news)
             
         } catch {
             print(error.localizedDescription)
@@ -132,6 +133,33 @@ class NewsService {
         defaults?.set(news[0].name_lable, forKey: "avatarLable")
         defaults?.synchronize()
 
+    }
+    //MARK: Create cache for Watch
+    func createCacheForWatch(news: [News]) {
+        
+        let defaults = UserDefaults.standard
+        
+        for (i, n) in news.enumerated() {
+            if !(n.photo.isEmpty) {
+                
+                if n.photo[0].cashed_photo == "" {
+                    print("empty")
+                    
+                } else {
+                    let strigForUrlPhoto = "file://" + (n.photo[0].cashed_photo)
+                    let url = URL(string: strigForUrlPhoto)
+                    
+                    do{
+                        let data = try Data(contentsOf: url!)
+                        print("data1 \(data)")
+                        defaults.set(data, forKey: "image\(i)")
+                        
+                    } catch(let error) {
+                        print(error.localizedDescription)
+                    }
+                }
+            }
+        }        
     }
     
 

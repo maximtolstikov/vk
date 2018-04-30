@@ -21,6 +21,7 @@
 		9459264020244D7E00440CD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9459263F20244D7E00440CD6 /* ViewController.swift */; };
 		9459264320244D7E00440CD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9459264120244D7E00440CD6 /* Main.storyboard */; };
 		9459264820244D7E00440CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9459264620244D7E00440CD6 /* LaunchScreen.storyboard */; };
+		9462892B208B96D10033AC01 /* NewsForWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9462892A208B96D10033AC01 /* NewsForWatchApp.swift */; };
 		9469126A207629C30035F719 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94691269207629C30035F719 /* MessageTableViewController.swift */; };
 		9493137A2078E58600E89D05 /* ICloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949313792078E58600E89D05 /* ICloudManager.swift */; };
 		94967420207E388B006047A1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9496741F207E388B006047A1 /* NotificationCenter.framework */; };
@@ -140,6 +141,7 @@
 		9459264220244D7E00440CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9459264720244D7E00440CD6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9459264920244D7E00440CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9462892A208B96D10033AC01 /* NewsForWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsForWatchApp.swift; sourceTree = "<group>"; };
 		94691269207629C30035F719 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
 		949313782078E18A00E89D05 /* VK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VK.entitlements; sourceTree = "<group>"; };
 		949313792078E58600E89D05 /* ICloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudManager.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 		94F702E020444A7D0004607E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		C0363967EAD6D32E8A7412EB /* Pods-VKTodayExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTodayExtention.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKTodayExtention/Pods-VKTodayExtention.debug.xcconfig"; sourceTree = "<group>"; };
 		E723900E6098E59494D9370D /* Pods-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.debug.xcconfig"; sourceTree = "<group>"; };
+		F9C1D96FDA2310FB16F14428 /* Pods_WatchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchApp_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C5C3BAB79435A1060363F91C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -215,6 +225,7 @@
 				9496741F207E388B006047A1 /* NotificationCenter.framework */,
 				80D2B8BDF3C1662C595E7192 /* Pods_VK_VKTodayExtention.framework */,
 				44A8C9A60FA564730FEF3474 /* Pods_VKTodayExtention.framework */,
+				F9C1D96FDA2310FB16F14428 /* Pods_WatchApp_Extension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -375,6 +386,7 @@
 				94E41B3420653DBD003820ED /* ApiManager.swift */,
 				94AF046220774BFF00223755 /* FetchRequestManager.swift */,
 				949313792078E58600E89D05 /* ICloudManager.swift */,
+				9462892A208B96D10033AC01 /* NewsForWatchApp.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -464,6 +476,7 @@
 			buildPhases = (
 				94A670B420885FEF00DF6546 /* Resources */,
 				94A670D920885FEF00DF6546 /* Embed App Extensions */,
+				C5C3BAB79435A1060363F91C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -733,6 +746,7 @@
 				9416834B202727D6003E24FB /* GroupsTableViewController.swift in Sources */,
 				94EB6004202C732800D7A6CE /* FriendService.swift in Sources */,
 				94168347202727A3003E24FB /* FriendsTableViewCell.swift in Sources */,
+				9462892B208B96D10033AC01 /* NewsForWatchApp.swift in Sources */,
 				940F8B0C2039BD8600E18FCD /* NewsTableViewController.swift in Sources */,
 				94E41B3520653DBD003820ED /* ApiManager.swift in Sources */,
 				944ED486205797B0002BB108 /* SearchGroupTableViewCell.swift in Sources */,

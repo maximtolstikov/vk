@@ -32,6 +32,9 @@ class FetchRequestManager {
             
         } else {
             let apiManager: ApiManager = ApiManager()
+            let newsService: NewsService = NewsService()
+            
+            newsService.updateNews()
             
             apiManager.getRequestFrends {(friends) in
                 if !friends.isEmpty {

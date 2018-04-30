@@ -7,12 +7,12 @@
 		<key>VK.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>11</integer>
 		</dict>
 		<key>VKTodayExtention.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>13</integer>
+			<integer>12</integer>
 		</dict>
 		<key>WatchApp (Notification).xcscheme</key>
 		<dict>
@@ -22,7 +22,7 @@
 		<key>WatchApp.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>11</integer>
+			<integer>13</integer>
 		</dict>
 	</dict>
 </dict>

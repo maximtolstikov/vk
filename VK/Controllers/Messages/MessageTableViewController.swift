@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MessageTableViewController: UITableViewController {
     
@@ -15,16 +16,15 @@ class MessageTableViewController: UITableViewController {
     override func viewDidLoad() {
 
         super.viewDidLoad()
-
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         
-        apiManager.getRequestFrends { (friendsId) in
-            
-            print(friendsId.count)
-            
-        }        
+
+        UserDefaults.standard.set("test3", forKey: "image")
+        print(UserDefaults.standard.data(forKey: "image0"))
+        
     }
     // MARK: - Table view data source
 
