@@ -14,16 +14,29 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
                     <items>
-                        <table alignment="left" id="SWF-cs-xAg">
+                        <table alignment="left" pagingScroll="YES" id="SWF-cs-xAg">
                             <items>
                                 <tableRow identifier="NewTableViewControllerID" id="sXh-4F-5c3" customClass="NewTableViewController" customModule="WatchApp_Extension">
-                                    <group key="rootItem" width="1" alignment="left" id="RBP-4H-MJa">
+                                    <group key="rootItem" width="1" height="142" alignment="left" contentMode="scaleAspectFill" layout="vertical" spacing="10" id="RBP-4H-MJa">
                                         <items>
-                                            <imageView width="0.29999999999999999" height="1" alignment="left" verticalAlignment="center" id="EOi-7r-ZTH"/>
-                                            <label width="1" alignment="center" verticalAlignment="center" text="Label" id="Xuf-Yb-XVk"/>
+                                            <group width="1" alignment="left" id="jQ8-X5-Oej">
+                                                <items>
+                                                    <label width="76" height="21" alignment="center" verticalAlignment="center" text="Label" numberOfLines="2" id="Xuf-Yb-XVk">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                                    </label>
+                                                    <imageView width="26" height="29" alignment="left" verticalAlignment="center" id="EOi-7r-ZTH"/>
+                                                </items>
+                                            </group>
+                                            <group width="1" alignment="left" id="cWu-IH-wGr">
+                                                <items>
+                                                    <imageView width="1" height="1" alignment="left" contentMode="scaleAspectFit" id="Tll-EZ-CHo"/>
+                                                </items>
+                                            </group>
                                         </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                     </group>
                                     <connections>
+                                        <outlet property="contentImage" destination="Tll-EZ-CHo" id="7TY-cm-bVa"/>
                                         <outlet property="image" destination="EOi-7r-ZTH" id="6mv-Ii-YLg"/>
                                         <outlet property="lable" destination="Xuf-Yb-XVk" id="Ejk-mm-ibv"/>
                                     </connections>

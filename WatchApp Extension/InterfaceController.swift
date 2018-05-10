@@ -8,6 +8,8 @@
 
 import WatchKit
 import WatchConnectivity
+import SwiftyJSON
+
 
 class InterfaceController: WKInterfaceController, WCSessionDelegate {
    
@@ -15,6 +17,9 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
     
     var session: WCSession?
     let defaults = UserDefaults.standard
+    let service = NewsServiceWatchApp()
+    var arrayNews = [News]()
+
     
     override func willActivate() {
         super.willActivate()
@@ -25,16 +30,47 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             session?.activate()
         }
     }
-
+    
     func update(){
-
-        newsTable.setNumberOfRows(1, withRowType: "NewTableViewControllerID")
-        let row = newsTable.rowController(at: 0) as! NewTableViewController
-        //let text = String(data: defaults.value(forKey: "text") as! Data, encoding: String.Encoding.utf8)
-        //let imageData = UIImage(data: defaults.value(forKey: "image") as! Data)
         
-        //row.lable.setText(text)
-        //row.image.setImage(imageData)
+        newsTable.setNumberOfRows(arrayNews.count, withRowType: "NewTableViewControllerID")
+        
+        for (i, new) in arrayNews.enumerated(){
+            
+            print(new.contentImageFriend)
+            
+            let row = newsTable.rowController(at: i) as! NewTableViewController
+            let text = String(new.name)
+            
+            self.service.getPhoto(photo: new.avatar, completion: { (data) in
+                let image = UIImage(data: data)
+                DispatchQueue.main.async {
+                    row.image.setImage(image)
+                }
+            })
+            
+            let contentGroup: String = new.contentImageGroup
+            let contentFriend: String = new.contentImageFriend
+            var url: URL?
+            
+            if contentGroup != "" {
+                url = URL(string: contentGroup)
+            } else if contentFriend != "" {
+                url = URL(string: contentFriend)
+            }
+            
+            if url != nil {
+            URLSession.shared.dataTask(with: url!) { (data, response, errore) in
+                guard data != nil else {return}
+                DispatchQueue.main.async {
+                    let image = UIImage(data: data!)
+                    row.contentImage.setImage(image)
+                }
+                }.resume()
+            }
+            
+            row.lable.setText(text)
+        }
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
@@ -44,9 +80,11 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate {
             print("activated")
             
             session.sendMessage(["request":"news"], replyHandler: { (reply) in
-                print("reply : \(reply)")
-//                self.defaults.set(reply["text"], forKey: "text")
-//                self.defaults.set(reply["image"], forKey: "image")
+               
+                let data = reply["newsData"] as! Data
+                self.service.getNewsArray(data: data, complition: { [weak self] (news) in
+                    self?.arrayNews = news
+                })
                 
                 self.update()
                 

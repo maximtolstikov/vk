@@ -12,4 +12,5 @@ class NewTableViewController: NSObject {
     
     @IBOutlet var image: WKInterfaceImage!
     @IBOutlet var lable: WKInterfaceLabel!
+    @IBOutlet var contentImage: WKInterfaceImage!
 }

@@ -21,8 +21,9 @@ class NewsForWatchApp {
 //            newsArray = ["image\(i)":data as! Data]
 //            sendArray.append(newsArray)
 //        }
+        
         guard let data = defaults.data(forKey: "image0") else {
-            return ["b":"b"]
+            return ["b":"b2"]
         }
         
         print("data \(data)")

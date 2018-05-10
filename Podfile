@@ -19,5 +19,8 @@ end
 target 'VKTodayExtention' do
   pod 'RealmSwift'
   pod 'SwiftyJSON'
+end
 
+target 'WatchApp Extension' do
+  pod 'SwiftyJSON'
 end

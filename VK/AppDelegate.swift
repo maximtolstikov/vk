@@ -97,11 +97,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, WCSessionDelegate {
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String: Any]) -> (Void)) {
 
         if message["request"] as? String == "news" {
+
+            let userDefaults = UserDefaults.standard
+            let newsData = userDefaults.data(forKey: "news")
             
-            let newsForArray = NewsForWatchApp()
-            let news = newsForArray.getArrayDataNews()
+            guard newsData != nil else {
+                print("In UserDefault are not newsData")
+                return
+            }
             
-            replyHandler(news)
+            replyHandler(["newsData": newsData!])
         }
     }
     

@@ -79,6 +79,32 @@ class ApiManager {
             }            
         }
     }
+    //MARK: Сохраняем текущие новости в UserDefaults
+    func saveNewsData(){
+        let path: String = "\(baseUrl)newsfeed.get\(userId)\(token)&filters=post&count=10\(verApi)"
+        let urlNews = URL(string: path)
+        
+        guard urlNews != nil else {
+            print("пустой url")
+            return}
+        
+        let configuration = URLSessionConfiguration.default
+        let session = URLSession(configuration: configuration)
+        
+        let task = 	session.dataTask(with: urlNews!) { (data, response, error) in
+            
+            if data != nil {
+                
+                let userDefault = UserDefaults.standard
+                userDefault.set(data, forKey: "news")
+            
+            } else {
+                print(error?.localizedDescription)
+            }
+        }
+        task.resume()
+        
+    }
     //MARK: методы управлением группами
     
     func deleteGroup(groupId: Int, complitionHandler: @escaping (JSON?, Error?) ->()){
@@ -130,9 +156,7 @@ class ApiManager {
         guard url != nil else {
             print("пустой url")
             return}
-        
-        print("url \(url)")
-        
+
         Alamofire.request(url!, method: .get)
             .validate().responseJSON { response in
                 
@@ -148,8 +172,6 @@ class ApiManager {
                     complition(groups)
                 }
         }
-        
-        
     }
     
     func addPost(text: String) {

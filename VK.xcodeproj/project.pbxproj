@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9330CFC71B135BA41FB75A96 /* Pods_WatchApp_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C1D96FDA2310FB16F14428 /* Pods_WatchApp_Extension.framework */; };
 		940F8B0C2039BD8600E18FCD /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F8B0B2039BD8600E18FCD /* NewsTableViewController.swift */; };
 		940F8B112039C4E500E18FCD /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F8B102039C4E500E18FCD /* NewsService.swift */; };
 		9416834120271FDC003E24FB /* StartTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9416834020271FDC003E24FB /* StartTabBarController.swift */; };
@@ -23,6 +24,8 @@
 		9459264820244D7E00440CD6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9459264620244D7E00440CD6 /* LaunchScreen.storyboard */; };
 		9462892B208B96D10033AC01 /* NewsForWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9462892A208B96D10033AC01 /* NewsForWatchApp.swift */; };
 		9469126A207629C30035F719 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94691269207629C30035F719 /* MessageTableViewController.swift */; };
+		946EF694209F5DFB00FDE68B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946EF693209F5DFB00FDE68B /* Model.swift */; };
+		948C049820A1DB9300D70A40 /* NewsServiceWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948C049720A1DB9300D70A40 /* NewsServiceWatchApp.swift */; };
 		9493137A2078E58600E89D05 /* ICloudManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949313792078E58600E89D05 /* ICloudManager.swift */; };
 		94967420207E388B006047A1 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9496741F207E388B006047A1 /* NotificationCenter.framework */; };
 		94967426207E388B006047A1 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94967424207E388B006047A1 /* MainInterface.storyboard */; };
@@ -121,9 +124,11 @@
 		0C39B3A3514B2E5D32747A83 /* Pods-VK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.release.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.release.xcconfig"; sourceTree = "<group>"; };
 		1BC89C504206B05E0DCEFA10 /* Pods-VK-VKTodayExtention.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK-VKTodayExtention.release.xcconfig"; path = "Pods/Target Support Files/Pods-VK-VKTodayExtention/Pods-VK-VKTodayExtention.release.xcconfig"; sourceTree = "<group>"; };
 		44A8C9A60FA564730FEF3474 /* Pods_VKTodayExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VKTodayExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC178388059C5AE4F0719F1 /* Pods-WatchApp Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		6AD41787FB7B37782218617B /* Pods-VK-VKTodayExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK-VKTodayExtention.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK-VKTodayExtention/Pods-VK-VKTodayExtention.debug.xcconfig"; sourceTree = "<group>"; };
 		80D2B8BDF3C1662C595E7192 /* Pods_VK_VKTodayExtention.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK_VKTodayExtention.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86E77673F53437E2CB36CD62 /* Pods_VK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E00F29DCBCB4E08F86FCC77 /* Pods_WatchApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		940F8B0B2039BD8600E18FCD /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		940F8B102039C4E500E18FCD /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
 		9416834020271FDC003E24FB /* StartTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabBarController.swift; sourceTree = "<group>"; };
@@ -143,6 +148,8 @@
 		9459264920244D7E00440CD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9462892A208B96D10033AC01 /* NewsForWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsForWatchApp.swift; sourceTree = "<group>"; };
 		94691269207629C30035F719 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		946EF693209F5DFB00FDE68B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		948C049720A1DB9300D70A40 /* NewsServiceWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsServiceWatchApp.swift; sourceTree = "<group>"; };
 		949313782078E18A00E89D05 /* VK.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VK.entitlements; sourceTree = "<group>"; };
 		949313792078E58600E89D05 /* ICloudManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ICloudManager.swift; sourceTree = "<group>"; };
 		9496741E207E388B006047A1 /* VKTodayExtention.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VKTodayExtention.appex; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -178,6 +185,7 @@
 		94EB6003202C732800D7A6CE /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		94F10896203A8273004DEB81 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		94F702E020444A7D0004607E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		A827A49CBFC320216E6BB9DB /* Pods-WatchApp Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WatchApp Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension.release.xcconfig"; sourceTree = "<group>"; };
 		C0363967EAD6D32E8A7412EB /* Pods-VKTodayExtention.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VKTodayExtention.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VKTodayExtention/Pods-VKTodayExtention.debug.xcconfig"; sourceTree = "<group>"; };
 		E723900E6098E59494D9370D /* Pods-VK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VK.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VK/Pods-VK.debug.xcconfig"; sourceTree = "<group>"; };
 		F9C1D96FDA2310FB16F14428 /* Pods_WatchApp_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WatchApp_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9330CFC71B135BA41FB75A96 /* Pods_WatchApp_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +235,7 @@
 				80D2B8BDF3C1662C595E7192 /* Pods_VK_VKTodayExtention.framework */,
 				44A8C9A60FA564730FEF3474 /* Pods_VKTodayExtention.framework */,
 				F9C1D96FDA2310FB16F14428 /* Pods_WatchApp_Extension.framework */,
+				8E00F29DCBCB4E08F86FCC77 /* Pods_WatchApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -353,6 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				94A670DC2088600400DF6546 /* WatchApp Extension.entitlements */,
+				946EF693209F5DFB00FDE68B /* Model.swift */,
+				948C049720A1DB9300D70A40 /* NewsServiceWatchApp.swift */,
 				94A670C720885FEF00DF6546 /* InterfaceController.swift */,
 				94A670C920885FEF00DF6546 /* ExtensionDelegate.swift */,
 				94A670CB20885FEF00DF6546 /* NotificationController.swift */,
@@ -420,6 +432,8 @@
 				1BC89C504206B05E0DCEFA10 /* Pods-VK-VKTodayExtention.release.xcconfig */,
 				C0363967EAD6D32E8A7412EB /* Pods-VKTodayExtention.debug.xcconfig */,
 				0547B7EDAB421259C6B4517C /* Pods-VKTodayExtention.release.xcconfig */,
+				4CC178388059C5AE4F0719F1 /* Pods-WatchApp Extension.debug.xcconfig */,
+				A827A49CBFC320216E6BB9DB /* Pods-WatchApp Extension.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -492,9 +506,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A670D820885FEF00DF6546 /* Build configuration list for PBXNativeTarget "WatchApp Extension" */;
 			buildPhases = (
+				A8D81A9C264E254EC4FB4063 /* [CP] Check Pods Manifest.lock */,
 				94A670BE20885FEF00DF6546 /* Sources */,
 				94A670BF20885FEF00DF6546 /* Frameworks */,
 				94A670C020885FEF00DF6546 /* Resources */,
+				BEB0A9F2760C177EA7AF66E6 /* [CP] Embed Pods Frameworks */,
+				CF11812CEF9DD9F077F84E6E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -634,7 +651,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-iOS/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/VK-ios-sdk/VK_ios_sdk.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -721,6 +738,57 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A8D81A9C264E254EC4FB4063 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WatchApp Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEB0A9F2760C177EA7AF66E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON-watchOS/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF11812CEF9DD9F077F84E6E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WatchApp Extension/Pods-WatchApp Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -771,6 +839,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948C049820A1DB9300D70A40 /* NewsServiceWatchApp.swift in Sources */,
+				946EF694209F5DFB00FDE68B /* Model.swift in Sources */,
 				94A670CC20885FEF00DF6546 /* NotificationController.swift in Sources */,
 				94A670CA20885FEF00DF6546 /* ExtensionDelegate.swift in Sources */,
 				94A670E12088678E00DF6546 /* NewTableViewController.swift in Sources */,
@@ -1057,6 +1127,7 @@
 		};
 		94A670D620885FEF00DF6546 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CC178388059C5AE4F0719F1 /* Pods-WatchApp Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchApp Extension/WatchApp Extension.entitlements";
@@ -1076,6 +1147,7 @@
 		};
 		94A670D720885FEF00DF6546 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A827A49CBFC320216E6BB9DB /* Pods-WatchApp Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "WatchApp Extension/WatchApp Extension.entitlements";
